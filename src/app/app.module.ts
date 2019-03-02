@@ -10,6 +10,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { TechsComponent } from './components/techs/techs.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavigationDirective } from './directives/navigation/navigation.directive';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TechsComponent,
     ContactComponent,
     FooterComponent,
+    NavigationDirective,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule
