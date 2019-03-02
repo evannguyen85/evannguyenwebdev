@@ -1,0 +1,9 @@
+#intro {
+    display: block;
+    height: 110vh;
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 0;
+    padding-top: 120px;
+    text-align: center;
+}

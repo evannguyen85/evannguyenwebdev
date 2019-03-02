@@ -1,0 +1,16 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    color: #5B6571;
+    font-size: 22px;
+    width: 100%;
+    height: 200px;
+    background-color: #1B242F;
+    padding: 70px 0 50px 0;
+    position: relative;
+}
