@@ -1,4 +1,4 @@
-import { Component, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewChildren, QueryList, HostListener } from '@angular/core';
 import { NavigationDirective } from './directives/navigation/navigation.directive';
 
 @Component({
@@ -9,7 +9,20 @@ import { NavigationDirective } from './directives/navigation/navigation.directiv
 export class AppComponent {
   title = 'evannguyenwebdev';
   @ViewChildren(NavigationDirective) appNav: QueryList<NavigationDirective>;
-  
+
+  // catch window scroll event. to be improved:
+  // using directive questions/44764592/angular-4-hostlistener-window-scroll-event-strangely-does-not-work-in-firefox
+  @HostListener('window:scroll', ['$event']) onWindowScroll($event) {
+    console.log('scrolling...');
+    const navbar = this.appNav.toArray()[1].el.nativeElement;
+    const sticky = navbar.offsetTop;
+
+    if (window.scrollY >= sticky) {
+      navbar.firstChild.classList.add('sticky');
+    } else {
+      navbar.firstChild.classList.remove('sticky');
+    }
+  }
 
   navigateToIntro(e) {
     // console.log(this.appNav.toArray()[1].el.nativeElement.firstChild.clientHeight);
