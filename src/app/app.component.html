@@ -1,54 +1,11 @@
-<app-home (clickViewWork)="navigateToSection()"></app-home>
-<app-navbar (clickMenu)="moveToSection($event)"></app-navbar>
+<!-- when user click View my work button on home -->
+<app-home appNavigation (clickViewWork)="navigateToIntro($event)"></app-home>
+<!-- when user click an item on navbar menu -->
+<app-navbar appNavigation (clickMenuItem)="goToSection($event)"></app-navbar>
+<!-- attribute directive -->
 <app-intro appNavigation></app-intro>
 <app-gallery appNavigation></app-gallery>
 <app-techs appNavigation></app-techs>
 <app-about appNavigation></app-about>
 <app-contact appNavigation></app-contact>
 <app-footer></app-footer>
-
-
-
-
-
-
-
-<!-- Disable for now. Will add letter -->
-<!-- 
-<section id="landing">
-    <div id="welcome">
-        <h1>Hello, Welcome to the landing page</h1>
-    </div>
-    <nav id="top-nav">
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#intro">INTRO</a></li>
-            <li><a href="#gal">GALLERY</a></li>
-            <li><a href="#techs">TECHS</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-</section>
-<section id="home" class="active">
-    <h1>HOME</h1>
-</section>
-<section id="intro">
-    <h1>INTRO</h1>
-</section>
-<section id="gal">
-    <h1>GALLERY</h1>
-</section>
-<section id="techs">
-    <h1>TECHS</h1>
-</section>
-<section id="about">
-    <h1>ABOUT</h1>
-</section>
-<section id="contact">
-    <h1>CONTACT</h1>
-</section>
-
-<footer>
-    Evan Nguyen &copy;2019
-</footer> -->

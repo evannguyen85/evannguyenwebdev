@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onViewWork() {
-    this.clickViewWork.emit();
+  onViewWork(e) {
+    this.clickViewWork.emit(e);
   }
 
 }

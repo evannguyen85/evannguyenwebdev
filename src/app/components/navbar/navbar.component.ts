@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @Output() clickMenu: EventEmitter<any> = new EventEmitter();
+  @Output() clickMenuItem: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -15,8 +15,13 @@ export class NavbarComponent implements OnInit {
   moveToSection(e) {
     if (e.target.id !== 'cover-letter') {
       e.preventDefault();
-      console.log(e);
-      this.clickMenu.emit(e.target.id);
+      this.clickMenuItem.emit(e);
+      // console.log(e);
     }
   }
+
+  // goHome(e) {
+  //   e.preventDefault();
+  //   console.log(e);
+  // }
 }
