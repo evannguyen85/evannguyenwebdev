@@ -13,15 +13,43 @@ export class AppComponent {
   // catch window scroll event. to be improved:
   // using directive questions/44764592/angular-4-hostlistener-window-scroll-event-strangely-does-not-work-in-firefox
   @HostListener('window:scroll', ['$event']) onWindowScroll($event) {
-    console.log('scrolling...');
+    // console.log('scrolling...');
     const navbar = this.appNav.toArray()[1].el.nativeElement;
+    const navHeight = navbar.clientHeight;
     const sticky = navbar.offsetTop;
-
+    // sticky navbar when it reaches the top
     if (window.scrollY >= sticky) {
       navbar.firstChild.classList.add('sticky');
     } else {
       navbar.firstChild.classList.remove('sticky');
     }
+
+    // const intro = this.appNav.toArray()[2].el.nativeElement;
+    // const top = intro.offsetTop;
+    // const bottom = intro.offsetTop + intro.firstChild.clientHeight;
+    // if (top <= window.scrollY && window.scrollY <= bottom) {
+    //   console.log('section is reaching...');
+    //   document.getElementById('intro').parentElement.classList.add('active');
+    // }
+
+
+    const appNavArray = this.appNav.toArray();
+    for (let i = 2; i < appNavArray.length; i++) {
+      // console.log(appNavArray[i]);
+      const section = appNavArray[i].el.nativeElement;
+      const top = section.offsetTop - navHeight;
+      const bottom = top + section.firstChild.clientHeight;
+      if (top <= window.scrollY && window.scrollY <= bottom) {
+        // console.log(i + ' section is reaching...');
+        // console.log(window.scrollY);
+        // console.log(top);
+        // console.log(section.firstChild.clientHeight);
+        console.log(section.firstChild.id);
+        const sectionId = section.firstChild.id; //duplicate id with lis. not good.
+        document.getElementById(sectionId).parentElement.classList.add('active');
+      }
+    }
+
   }
 
   navigateToIntro(e) {
