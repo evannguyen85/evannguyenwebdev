@@ -9,22 +9,36 @@ import { NavigationDirective } from './directives/navigation/navigation.directiv
 export class AppComponent {
   title = 'evannguyenwebdev';
   @ViewChildren(NavigationDirective) appNav: QueryList<NavigationDirective>;
+  
 
   navigateToIntro(e) {
-    console.log(this.appNav.toArray()[1].el.nativeElement.firstChild.clientHeight);
+    // console.log(this.appNav.toArray()[1].el.nativeElement.firstChild.clientHeight);
     // hardcode nav-height = 50 for now. will find a way to get navHeight
     // when click on Viewwork button. may consider navbar component inside home.
-    const navHeight = this.appNav.toArray()[1].el.nativeElement.firstChild.clientHeight;
+    const navbar = this.appNav.toArray()[1].el.nativeElement.firstChild;
+    const navHeight = navbar.clientHeight;
     this.appNav.toArray()[2].navigateToSection(navHeight);
   }
 
   goToSection(e) {
-    // console.log(this.appNav.toArray()[0]);
-    // e: navbar.
+    // e: li
+    const navbar = this.appNav.toArray()[1].el.nativeElement.firstChild;
+    // console.log(navbar);
+    const uls = navbar.firstChild.childNodes[1].childNodes;
+    // console.log(uls);
+    uls.forEach(ul => {
+      const lis = ul.childNodes;
+      // console.log(lis);
+      lis.forEach(li => {
+        li.className = '';
+      });
+    });
+    // console.log(this.appNav.toArray()[1].el);
     const id = e.target.id;
     switch (id) {
       case 'home':
         this.appNav.toArray()[0].navigateToSection(e);
+        navbar.classList.remove('sticky');
         break;
       case 'intro':
         this.appNav.toArray()[2].navigateToSection(e);

@@ -10,3 +10,7 @@ nav {
     left: 0;
     width: 100%;
 }
+
+.link-active {
+    color: #E0126B !important;
+}
