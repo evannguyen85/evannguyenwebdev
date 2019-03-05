@@ -1,9 +1,19 @@
 #techs {
     display: block;
-    height: 110vh;
+    /* height: 110vh; */
     width: 100%;
-    background-color: aquamarine;
-    margin-top: 0;
-    padding-top: 120px;
+    /* background-color: aquamarine; */
+    margin: 0 auto 15px;
+    padding-top: 80px;
     text-align: center;
+}
+
+.techs-panel {
+    background-color: #9EBEF3;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10;
 }
