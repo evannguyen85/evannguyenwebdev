@@ -11,8 +11,7 @@ export class NavigationDirective {
     const elem = this.el;
     let navHeight = 0;
     if (e.target !== undefined) {
-      // console.log('e target = ' + e.target);
-      navHeight = e.target.clientHeight;
+      navHeight = 0; // e.target.offsetHeight; // to think about this one carefully
       window.scrollTo({
         top: elem.nativeElement.offsetTop - navHeight,
         left: 0,
@@ -21,7 +20,6 @@ export class NavigationDirective {
       // e: $event of ul
       const li = e.srcElement.parentElement;
       const nav = li.offsetParent;
-      li.className = '';
       li.className = 'active';
       if (nav.scrollTop === 0 && nav.scrollLeft === 0) {
         if (!nav.className.includes('sticky')) {

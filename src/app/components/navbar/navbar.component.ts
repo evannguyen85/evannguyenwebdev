@@ -13,15 +13,10 @@ export class NavbarComponent implements OnInit {
   }
 
   moveToSection(e) {
-    if (e.target.id !== 'cover-letter') {
+    if (e.target.className !== 'cover-letter') {
       e.preventDefault();
       this.clickMenuItem.emit(e);
       // console.log(e);
     }
   }
-
-  // goHome(e) {
-  //   e.preventDefault();
-  //   console.log(e);
-  // }
 }

@@ -10,52 +10,47 @@ export class AppComponent {
   title = 'evannguyenwebdev';
   @ViewChildren(NavigationDirective) appNav: QueryList<NavigationDirective>;
 
-  // catch window scroll event. to be improved:
+  // for now, it can scroll and click to section, and change active link as expected
+  // Current issues: 1) menu items are blinking when scroll or click - this is due to interference btw scroll and click
+  // 2) active class - not stand-out. need to change the font to be Pink?
+  // 3) a lot of duplicated code epecially loop to remove active class.
+  // 4) need to move the scroll function to be another directive, similar to click directive, or maybe combined? 
   // using directive questions/44764592/angular-4-hostlistener-window-scroll-event-strangely-does-not-work-in-firefox
+  // 5) duplicated id: nav li and section.
+
+  // catch window scroll event.
   @HostListener('window:scroll', ['$event']) onWindowScroll($event) {
     // console.log('scrolling...');
     const navbar = this.appNav.toArray()[1].el.nativeElement;
-    const navHeight = navbar.clientHeight;
+    const navHeight = navbar.firstChild.offsetHeight;
     const sticky = navbar.offsetTop;
+
     // sticky navbar when it reaches the top
     if (window.scrollY >= sticky) {
       navbar.firstChild.classList.add('sticky');
     } else {
       navbar.firstChild.classList.remove('sticky');
     }
-
-    // const intro = this.appNav.toArray()[2].el.nativeElement;
-    // const top = intro.offsetTop;
-    // const bottom = intro.offsetTop + intro.firstChild.clientHeight;
-    // if (top <= window.scrollY && window.scrollY <= bottom) {
-    //   console.log('section is reaching...');
-    //   document.getElementById('intro').parentElement.classList.add('active');
-    // }
-
-
     const appNavArray = this.appNav.toArray();
     for (let i = 2; i < appNavArray.length; i++) {
-      // console.log(appNavArray[i]);
       const section = appNavArray[i].el.nativeElement;
       const top = section.offsetTop - navHeight;
-      const bottom = top + section.firstChild.clientHeight;
+      const bottom = top + section.firstChild.offsetHeight;
       if (top <= window.scrollY && window.scrollY <= bottom) {
-        // console.log(i + ' section is reaching...');
-        // console.log(window.scrollY);
-        // console.log(top);
-        // console.log(section.firstChild.clientHeight);
-        console.log(section.firstChild.id);
-        const sectionId = section.firstChild.id; //duplicate id with lis. not good.
-        document.getElementById(sectionId).parentElement.classList.add('active');
+        // e: li
+        const nav = this.appNav.toArray()[1].el.nativeElement.firstChild;
+        const uls = nav.firstChild.childNodes[1].childNodes;
+        const lis = document.querySelectorAll('nav div ul li');
+        [].forEach.call(lis, function(li) {
+          li.classList.remove('active');
+        });
+        const activeSectionId = section.firstChild.id;
+        document.querySelector('.' + activeSectionId).parentElement.classList.add('active');
       }
     }
-
   }
 
   navigateToIntro(e) {
-    // console.log(this.appNav.toArray()[1].el.nativeElement.firstChild.clientHeight);
-    // hardcode nav-height = 50 for now. will find a way to get navHeight
-    // when click on Viewwork button. may consider navbar component inside home.
     const navbar = this.appNav.toArray()[1].el.nativeElement.firstChild;
     const navHeight = navbar.clientHeight;
     this.appNav.toArray()[2].navigateToSection(navHeight);
@@ -64,19 +59,14 @@ export class AppComponent {
   goToSection(e) {
     // e: li
     const navbar = this.appNav.toArray()[1].el.nativeElement.firstChild;
-    // console.log(navbar);
     const uls = navbar.firstChild.childNodes[1].childNodes;
-    // console.log(uls);
-    uls.forEach(ul => {
-      const lis = ul.childNodes;
-      // console.log(lis);
-      lis.forEach(li => {
-        li.className = '';
-      });
+    const className = e.target.className;
+    const lis = document.querySelectorAll('nav div ul li');
+    [].forEach.call(lis, function(li) {
+      li.classList.remove('active');
     });
-    // console.log(this.appNav.toArray()[1].el);
-    const id = e.target.id;
-    switch (id) {
+
+    switch (className) {
       case 'home':
         this.appNav.toArray()[0].navigateToSection(e);
         navbar.classList.remove('sticky');
