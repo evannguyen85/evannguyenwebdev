@@ -65,9 +65,9 @@ export class AppComponent {
     [].forEach.call(lis, function(li) {
       li.classList.remove('active');
     });
-
+    console.log(className);
     switch (className) {
-      case 'home':
+      case 'navbar-brand':
         this.appNav.toArray()[0].navigateToSection(e);
         navbar.classList.remove('sticky');
         break;

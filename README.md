@@ -1,9 +1,9 @@
 Notes for March 5 2019:
 Todo:
 Immediate:
-1) Home button not working yet.
-2) Work on the "Expand Gallery" function
-3) Populate contents for "Technologies" Section
+1) Home button not working yet -> fixed
+2) Work on the "Expand Gallery" function --> done
+3) Populate contents for "Technologies" Section --> done
 4) Improve UI - looks and feel
 5) Add animation. 
 

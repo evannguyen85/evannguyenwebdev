@@ -5,5 +5,8 @@
   <h2>Hello, I'm <span style="color: #e0126b;">Evan Nguyen</span></h2>
   <p>I'm a web developer</p>
   <hr>
-  <p class="btn-view-work" (click)="onViewWork($event)">View my work<i class="fas fa-arrow-right"></i></p>
+  <h3 appViewWork class="btn-view-work" (click)="onViewWork($event)" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <span style="padding-right: 10px;">View my work</span>
+    <i [class]="isOnMouseEnter ? 'fas fa-arrow-down' : 'fas fa-arrow-right'"></i>
+  </h3>
 </div>

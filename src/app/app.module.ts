@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavigationDirective } from './directives/navigation/navigation.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollapseDirective } from './directives/collapse/collapse.directive';
+import { ViewWorkDirective } from './directives/view-work/view-work.directive';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { CollapseDirective } from './directives/collapse/collapse.directive';
     NavigationDirective,
     NavbarComponent,
     CollapseDirective,
+    ViewWorkDirective,
   ],
   imports: [
     BrowserModule
