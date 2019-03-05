@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavigationDirective } from './directives/navigation/navigation.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CollapseDirective } from './directives/collapse/collapse.directive';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FooterComponent,
     NavigationDirective,
     NavbarComponent,
+    CollapseDirective,
   ],
   imports: [
     BrowserModule

@@ -1,3 +1,16 @@
+Notes for March 5 2019:
+Todo:
+Immediate:
+1) Home button not working yet.
+2) Work on the "Expand Gallery" function
+3) Populate contents for "Technologies" Section
+4) Improve UI - looks and feel
+5) Add animation. 
+
+Next:
+1) Fixing issues related to scrolling and clicking menu items. refer to app.component.ts comments.
+
+
 # Evannguyenwebdev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.

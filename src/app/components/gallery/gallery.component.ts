@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollapseDirective } from '../../directives/collapse/collapse.directive';
 
 @Component({
   selector: 'app-gallery',
