@@ -9,27 +9,24 @@ export class NavigationDirective {
 
   navigateToSection(e) {
     const elem = this.el;
-    let navHeight = 0;
     if (e.target !== undefined) {
-      navHeight = 0; // e.target.offsetHeight; // to think about this one carefully
+      // navHeight = e.target.offsetHeight; // to think about this one carefully
+      // console.log(navHeight);
       window.scrollTo({
-        top: elem.nativeElement.offsetTop - navHeight,
+        top: elem.nativeElement.offsetTop,
         left: 0,
         behavior: 'smooth'
       });
       // e: $event of ul
-      const li = e.srcElement.parentElement;
-      const nav = li.offsetParent;
-      li.className = 'active';
+      const nav = e.srcElement.parentElement.offsetParent;
       if (nav.scrollTop === 0 && nav.scrollLeft === 0) {
         if (!nav.className.includes('sticky')) {
           nav.className += ' sticky';
         }
       }
     } else {
-      navHeight = e;
       window.scrollTo({
-        top: elem.nativeElement.offsetTop - navHeight,
+        top: elem.nativeElement.offsetTop,
         left: 0,
         behavior: 'smooth'
       });

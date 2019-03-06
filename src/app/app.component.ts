@@ -39,7 +39,6 @@ export class AppComponent {
       if (top <= window.scrollY && window.scrollY <= bottom) {
         // e: li
         const nav = this.appNav.toArray()[1].el.nativeElement.firstChild;
-        const uls = nav.firstChild.childNodes[1].childNodes;
         const lis = document.querySelectorAll('nav div ul li');
         [].forEach.call(lis, function(li) {
           li.classList.remove('active');
