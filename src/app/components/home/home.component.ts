@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ViewWorkDirective } from '../../directives/view-work/view-work.directive';
 
 @Component({
   selector: 'app-home',
@@ -16,16 +15,6 @@ export class HomeComponent implements OnInit {
 
   onViewWork(e) {
     this.clickViewWork.emit(e);
-  }
-
-  onMouseEnter() {
-    this.isOnMouseEnter = true;
-    console.log(this.isOnMouseEnter);
-  }
-
-  onMouseLeave() {
-    this.isOnMouseEnter = false;
-    console.log(this.isOnMouseEnter);
   }
 
 }

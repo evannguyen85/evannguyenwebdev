@@ -3,19 +3,24 @@
     /* height: 110vh; */
     width: 100%;
     /* background-color: aquamarine; */
-    margin: 0 auto 15px;
+    margin: 0 auto;
     padding-top: 80px;
     text-align: center;
+    background-color: #303030;
 }
-
+h4 {
+    font-size: 18pt;
+}
 .gallery-panel {
-    background-color: #9EBEF3;
+    background-color: #424242;
     width: 80%;
     margin: auto;
     text-align: justify;
     padding: 20px;
     border-radius: 5px;
     z-index: 10;
+    color: white;
+    transform: translateZ(100px);
 }
 
 .thumbnail {

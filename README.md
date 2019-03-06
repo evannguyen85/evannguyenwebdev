@@ -10,6 +10,11 @@ Immediate:
 Next:
 1) Fixing issues related to scrolling and clicking menu items. refer to app.component.ts comments.
 
+plan for today Mar 6:
+- Jquery to toggle arrow-right and arrow-down when hover. no need, can use css
+- popuplate content for intro, about
+- Increase font-size for navbar
+- Change background for sections
 
 # Evannguyenwebdev
 

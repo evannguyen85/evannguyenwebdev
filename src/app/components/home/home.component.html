@@ -1,12 +1,13 @@
-<img appResponsiveImage="../../../assets/images/bg-min.jpg">
+<img appResponsiveImage="../../../assets/images/bg.png">
 <!-- <div class="bg-image"></div> -->
 
 <div class="bg-text">
-  <h2>Hello, I'm <span style="color: #e0126b;">Evan Nguyen</span></h2>
+  <h2>Welcome! I'm <span style="color: #e0126b;">Evan Nguyen</span></h2>
   <p>I'm a web developer</p>
-  <hr>
-  <h3 appViewWork class="btn-view-work" (click)="onViewWork($event)" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-    <span style="padding-right: 10px;">View my work</span>
-    <i [class]="isOnMouseEnter ? 'fas fa-arrow-down' : 'fas fa-arrow-right'"></i>
-  </h3>
+  <!-- <hr> -->
+  <h4 class="btn-view-work" (click)="onViewWork($event)">
+    <span style="padding-right: 10px;">View my details</span>
+    <i class="fas fa-arrow-right right"></i>
+    <i class="fas fa fa-arrow-down down"></i>
+  </h4>
 </div>
