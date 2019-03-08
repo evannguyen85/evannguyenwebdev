@@ -21,3 +21,14 @@ nav {
     width: 100%;
     z-index: 20;
 }
+
+@media only screen and (max-width: 945px) {
+    nav {
+        font-size: 12pt;
+    }
+
+    nav ul li a {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

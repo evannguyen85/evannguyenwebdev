@@ -37,6 +37,7 @@ hr {
     width: 200px;
     margin: 10px auto;
     border: 1px solid white;
+    margin-top: 40px;
 }
 
 .btn-view-work:hover {
@@ -44,11 +45,20 @@ hr {
     background-color: #21c2c8;
 }
 
-.btn-view-work:hover .right, .btn-view-work .down {
+.btn-view-work svg {
+    transition: 0.5s;
+}
+
+.btn-view-work:hover svg {
+    transform: rotate(90deg);
+}
+
+
+/* .btn-view-work:hover .right, .btn-view-work .down {
     display: none;
 }
 
 .btn-view-work:hover .down {
     display: inline-block;
-}
+} */
 

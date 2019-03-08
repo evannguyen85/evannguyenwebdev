@@ -9,15 +9,6 @@ import { NavigationDirective } from './directives/navigation/navigation.directiv
 export class AppComponent {
   title = 'evannguyenwebdev';
   @ViewChildren(NavigationDirective) appNav: QueryList<NavigationDirective>;
-
-  // for now, it can scroll and click to section, and change active link as expected
-  // Current issues: 1) menu items are blinking when scroll or click - this is due to interference btw scroll and click
-  // 2) active class - not stand-out. need to change the font to be Pink?
-  // 3) a lot of duplicated code epecially loop to remove active class.
-  // 4) need to move the scroll function to be another directive, similar to click directive, or maybe combined? 
-  // using directive questions/44764592/angular-4-hostlistener-window-scroll-event-strangely-does-not-work-in-firefox
-  // 5) duplicated id: nav li and section.
-
   // catch window scroll event.
   @HostListener('window:scroll', ['$event']) onWindowScroll($event) {
     // console.log('scrolling...');

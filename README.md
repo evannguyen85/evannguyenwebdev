@@ -4,17 +4,26 @@ Immediate:
 1) Home button not working yet -> fixed
 2) Work on the "Expand Gallery" function --> done
 3) Populate contents for "Technologies" Section --> done
-4) Improve UI - looks and feel
+4) Improve UI - looks and feel. ongoing
 5) Add animation. 
 
 Next:
-1) Fixing issues related to scrolling and clicking menu items. refer to app.component.ts comments.
+1) Fixing issues related to scrolling and clicking menu items. refer to app.component.ts comments. --> fixed
 
 plan for today Mar 6:
-- Jquery to toggle arrow-right and arrow-down when hover. no need, can use css
+- Jquery to toggle arrow-right and arrow-down when hover. no need, can use css --> done
 - popuplate content for intro, about
-- Increase font-size for navbar
-- Change background for sections
+- Increase font-size for navbar --> done
+- Change background for sections --> done
+
+
+1) Learn Angular Animation
+2) ngFor, ngIf --> reduce code for html and app.component.
+3) contact form - different look and service.
+4) Consistent padding when scrolling.
+5) Responsive different devices.
+
+
 
 # Evannguyenwebdev
 
