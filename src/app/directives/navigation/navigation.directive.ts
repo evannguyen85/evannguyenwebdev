@@ -25,8 +25,9 @@ export class NavigationDirective {
         }
       }
     } else {
+      const navHeight = e;
       window.scrollTo({
-        top: elem.nativeElement.offsetTop,
+        top: elem.nativeElement.offsetTop - navHeight,
         left: 0,
         behavior: 'smooth'
       });

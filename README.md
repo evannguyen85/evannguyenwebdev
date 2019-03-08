@@ -22,6 +22,7 @@ plan for today Mar 6:
 3) contact form - different look and service.
 4) Consistent padding when scrolling.
 5) Responsive different devices.
+6) Hover, it gives animation.
 
 
 

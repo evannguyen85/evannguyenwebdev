@@ -8,12 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a (click)="moveToSection($event)" class="navbar-brand" href="#">EVAN NGUYEN</a>
+      <a (click)="onClickMenuItem($event)" class="navbar-brand" href="#">EVAN NGUYEN</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav" (click)="moveToSection($event)">
+      <ul class="nav navbar-nav" (click)="onClickMenuItem($event)">
         <li *ngFor="let menuItem of menuItems">
           <a [ngClass]="getClass(menuItem)" href="#">{{ menuItem }}<span *ngIf="menuItem === 'INTRODUCTION'" class="sr-only">(current)</span></a>
         </li>

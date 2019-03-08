@@ -23,9 +23,11 @@ export class NavbarComponent implements OnInit {
     };
   }
 
-  moveToSection(e) {
+  onClickMenuItem(e) {
     e.preventDefault();
     this.clickMenuItem.emit(e);
-    console.log(e);
+    // console.log(e);
+    // console.log(e.path[3]);
+    e.path[3].classList.remove('in');
   }
 }
