@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavigationDirective } from './directives/navigation/navigation.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollapseDirective } from './directives/collapse/collapse.directive';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 
 
@@ -31,6 +32,7 @@ import { CollapseDirective } from './directives/collapse/collapse.directive';
     NavigationDirective,
     NavbarComponent,
     CollapseDirective,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
