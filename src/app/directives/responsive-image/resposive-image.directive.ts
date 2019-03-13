@@ -41,7 +41,7 @@ export class ResposiveImageDirective implements OnInit, AfterViewInit, AfterCont
     elem.style['maxWidth'] = '100%';
     // elem.style['margin-left'] = '-5px';
     // elem.style['margin-bottom'] = '-5px';
-    elem.style['filter'] = 'blur(1px)';
-    elem.style['-webkit-filter'] = 'blur(1px)';
+    // elem.style['filter'] = 'blur(1px)';
+    // elem.style['-webkit-filter'] = 'blur(1px)';
   }
 }

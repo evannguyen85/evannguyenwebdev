@@ -18,7 +18,10 @@ export class NavigationDirective {
         behavior: 'smooth'
       });
       // e: $event of ul
-      const nav = e.srcElement.parentElement.offsetParent;
+      const li = e.srcElement.parentElement;
+      li.classList.add('active');
+      const nav = li.offsetParent;
+      console.log(nav);
       if (nav.scrollTop === 0 && nav.scrollLeft === 0) {
         if (!nav.className.includes('sticky')) {
           nav.className += ' sticky';

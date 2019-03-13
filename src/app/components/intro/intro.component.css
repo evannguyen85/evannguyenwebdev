@@ -12,10 +12,10 @@
 
 .intro-panel {
     background-color: #424242;
-    width: 80%;
+    width: 95%;
     margin: auto;
-    text-align: justify;
-    padding: 20px;
+    text-align: left;
+    padding: 10px;
     border-radius: 5px;
     color: white;
     z-index: 10;
@@ -23,5 +23,34 @@
 }
 
 p {
-    font-size: 18pt;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+    
+    .intro-panel {
+        width: 80%;
+        padding: 15px;
+    }
 }

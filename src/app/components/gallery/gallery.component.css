@@ -8,15 +8,12 @@
     text-align: center;
     background-color: #303030; 
 }
-h4 {
-    font-size: 18pt;
-}
 .gallery-panel {
     background-color: #424242;
-    width: 80%;
+    width: 95%;
     margin: auto;
     text-align: justify;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     z-index: 10;
     color: white;
@@ -34,4 +31,37 @@ h4 {
 .expand-gallery {
     margin-top: 20px;
     text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    .gallery-panel {
+        width: 80%;
+        padding: 15px;
+    }
 }
