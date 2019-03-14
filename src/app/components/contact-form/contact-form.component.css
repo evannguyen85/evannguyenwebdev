@@ -31,3 +31,11 @@ button {
 button:hover {
     background-color: #FDAB21; 
 }
+
+.btn[disabled] {
+    opacity: 0.3;
+}
+.btn[disabled]:hover {
+    background-color: #FDAB21; 
+    opacity: 0.3;
+}
