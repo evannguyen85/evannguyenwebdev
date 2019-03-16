@@ -1,3 +1,7 @@
+Deployed on heroku here: https://afternoon-oasis-26466.herokuapp.com/
+
+
+
 Notes for March 5 2019:
 Todo:
 Immediate:
