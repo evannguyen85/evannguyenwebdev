@@ -21,7 +21,7 @@ export class NavigationDirective {
       const li = e.srcElement.parentElement;
       li.classList.add('active');
       const nav = li.offsetParent;
-      console.log(nav);
+      // console.log(nav);
       if (nav.scrollTop === 0 && nav.scrollLeft === 0) {
         if (!nav.className.includes('sticky')) {
           nav.className += ' sticky';

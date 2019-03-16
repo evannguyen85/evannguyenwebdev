@@ -12,7 +12,7 @@ export class ResposiveImageDirective implements OnInit, AfterViewInit, AfterCont
   ngOnInit() {}
 
   ngAfterViewInit() {
-    console.log(this.src);
+    // console.log(this.src);
     if (this.src) {
       const elem = this.el.nativeElement;
       elem.style['background'] = 'url("' + this.src + '")';
