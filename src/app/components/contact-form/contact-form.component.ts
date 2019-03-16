@@ -16,7 +16,7 @@ export class ContactFormComponent implements OnInit {
   onSubmit(formContact) {
     console.log(formContact);
     const formValue = formContact.value;
-    const url = 'http://localhost:3000/';
+    const url = '/';
     const body = JSON.stringify(formValue);
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
