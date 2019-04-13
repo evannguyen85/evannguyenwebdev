@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CollapseDirective } from '../../directives/collapse/collapse.directive';
+import { MatDialog } from '@angular/material';
+import { DialogComponent } from '../../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-gallery',
@@ -8,9 +9,23 @@ import { CollapseDirective } from '../../directives/collapse/collapse.directive'
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  dialogResult = '';
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '70%',
+      // height: '80%',
+      data: 'This is passed into the dialog. Hardcoded for now! To be changed depending on project'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog Closed: ${result}`);
+      this.dialogResult = result;
+    });
   }
 
 }

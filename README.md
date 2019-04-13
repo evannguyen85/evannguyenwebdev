@@ -1,4 +1,10 @@
-Deployed on heroku here: https://afternoon-oasis-26466.herokuapp.com/
+
+Angular Material
+Install libraries:
+1) @angular/material
+2) @angular/cdk
+3) @angular/animations
+4) hammerjs
 
 
 
@@ -9,7 +15,7 @@ Immediate:
 2) Work on the "Expand Gallery" function --> done
 3) Populate contents for "Technologies" Section --> done
 4) Improve UI - looks and feel. ongoing
-5) Add animation. 
+5) Add animation.
 
 Next:
 1) Fixing issues related to scrolling and clicking menu items. refer to app.component.ts comments. --> fixed

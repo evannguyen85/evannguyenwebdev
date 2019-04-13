@@ -2,6 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import 'hammerjs';
+import { MatCardModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +23,7 @@ import { NavigationDirective } from './directives/navigation/navigation.directiv
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollapseDirective } from './directives/collapse/collapse.directive';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 
@@ -34,12 +42,18 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     NavbarComponent,
     CollapseDirective,
     ContactFormComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule
   ],
+  entryComponents: [DialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
