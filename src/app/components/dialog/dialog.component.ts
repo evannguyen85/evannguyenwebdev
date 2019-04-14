@@ -8,18 +8,12 @@ import { MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-
   constructor(public thisDialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
 
   ngOnInit() {
   }
 
-  onCloseConfirm() {
-    this.thisDialogRef.close('Confirm');
+  onClose() {
+    this.thisDialogRef.close('Close');
   }
-
-  onCloseCancel() {
-    this.thisDialogRef.close('Cancel');
-  }
-
 }

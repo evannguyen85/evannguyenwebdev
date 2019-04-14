@@ -1,15 +1,42 @@
-<div>
-  <h2 mat-dialog-title>MY DIALOG</h2>
-  <hr>
-  <mat-dialog-content>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+<mat-card class="dialog-card">
+  <mat-card-header>
+    <div mat-card-avatar class="card-header-image"></div>
+    <mat-card-title>CALCULATOR</mat-card-title>
+    <mat-card-subtitle>Responsive Calculator</mat-card-subtitle>
+  </mat-card-header>
+  <img src="../../../assets/images/calculator.png" alt="Photo of calculator app" mat-card-image>
+  <mat-card-content class="card-content">
+    <p>
+      A calculator to peform basic and scientific calculations. This is built using html, css, javascript and
+      bootstrap. The app runs on Heroku so it may take several seconds to start up initially.
+    </p>
+    <hr>
+    <!-- <strong>{{ data }}</strong> -->
+    <p>
+      <span style="margin-right: 30px;">
+        <img class="logo " src="../../../assets/images/logos/html.png" alt="html">
+        HTML
+      </span>
+      <span>
+        <img class="logo" src="../../../assets/images/logos/css.png" alt="css">
+        CSS
+      </span>
+    </p>
     <br>
-  <br>
-  <strong>{{ data }}</strong>
-  </mat-dialog-content>
-  <hr>
-  <mat-dialog-actions>
-    <button mat-raised-button (click)="onCloseConfirm()">CONFIRM</button>
-    <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
-  </mat-dialog-actions>
-</div>
+    <p>
+      <span style="margin-right: 30px;">
+        <img class="logo" src="../../../assets/images/logos/javascript.png" alt="javascript">
+        Javascript
+      </span>
+      <span>
+        <img class="logo" src="../../../assets/images/logos/bootstrap.png" alt="bootstrap">
+        Bootstrap
+      </span>
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <a mat-button target="_blank" href="https://boiling-brook-33207.herokuapp.com/">VIEW APP</a>
+    <a mat-button target="_black" href="https://github.com/evannguyen85/MyCalculator">SEE SOURCE CODE / GIT</a>
+    <button mat-button (click)="onClose()">CLOSE</button>
+  </mat-card-actions>
+</mat-card>

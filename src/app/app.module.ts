@@ -8,7 +8,7 @@ import 'hammerjs';
 import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -51,7 +51,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule
   ],
   entryComponents: [DialogComponent],
   providers: [],

@@ -1,0 +1,61 @@
+.dialog-card {
+    padding-bottom: 30px;
+}
+
+.dialog-card>img {
+    max-width: 50%;
+}
+
+.dialog-card>.card-content {
+    max-width: 50%;
+    float: right;
+}
+
+.card-actions {
+    text-align: center;
+}
+
+.card-actions>button {
+    margin-right: 10px;
+}
+
+.card-header-image {
+    background-image: url('../../../assets/images/calc-icon.png');
+    background-size: cover;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 22px;
+}
+
+.logo {
+    max-width: 40px;
+    max-height: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    p {
+        font-size: 18px;
+    }
+
+    .logo {
+        max-width: 30px;
+        max-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 14px;
+    }
+
+    .logo {
+        max-width: 30px;
+        max-height: 20px;
+    }
+}
