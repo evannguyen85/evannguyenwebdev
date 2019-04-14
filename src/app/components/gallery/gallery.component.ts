@@ -17,7 +17,7 @@ export class GalleryComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '70%',
+      width: '85%',
       // height: '80%',
       data: 'This is passed into the dialog. Hardcoded for now! To be changed depending on project'
     });

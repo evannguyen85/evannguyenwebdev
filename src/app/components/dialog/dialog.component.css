@@ -1,22 +1,15 @@
 .dialog-card {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
-.dialog-card>img {
-    max-width: 50%;
+.dialog-card > img {
+    width: 100%;
+    margin: auto;
 }
 
-.dialog-card>.card-content {
-    max-width: 50%;
-    float: right;
-}
-
-.card-actions {
-    text-align: center;
-}
-
-.card-actions>button {
-    margin-right: 10px;
+.mat-card-content {
+    width: 100%;
+    margin: 20px auto;
 }
 
 .card-header-image {
@@ -30,32 +23,65 @@ a, a:hover, a:active {
 }
 
 p {
-    font-size: 22px;
+    font-size: 14px;
 }
 
 .logo {
-    max-width: 40px;
-    max-height: 30px;
+    max-width: 20px;
+    max-height: 15px;
 }
 
-@media only screen and (max-width: 900px) {
+.mat-card-actions {
+    text-align: center;
+}
+
+.mat-raised-button:first-child  {
+    margin-right: 8px !important;
+}
+
+.mat-raised-button:not(:last-child) {
+    margin-right: 8px !important;
+}
+
+.mat-raised-button {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    .dialog-card > img {
+        max-width: 40%;
+        margin: auto auto 20px;
+    }
+
+    .mat-card-content {
+        max-width: 60%;
+        float: right;
+        margin: auto;
+        margin-bottom: 20px;
+        padding-left: 15px;
+    }
+
     p {
-        font-size: 18px;
+        font-size: 26px;
+    }
+    .mat-raised-button {
+        line-height: 36px;
+        font-size: 22px;
+    }
+
+    .mat-raised-button:first-child  {
+        margin-right: 15px !important;
+    }
+
+    .mat-raised-button:not(:last-child) {
+        margin-right: 15px !important;
     }
 
     .logo {
-        max-width: 30px;
-        max-height: 20px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    p {
-        font-size: 14px;
+        max-width: 40px;
+        max-height: 30px;
     }
 
-    .logo {
-        max-width: 30px;
-        max-height: 20px;
-    }
 }
+

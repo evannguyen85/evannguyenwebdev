@@ -13,7 +13,7 @@
     <hr>
     <!-- <strong>{{ data }}</strong> -->
     <p>
-      <span style="margin-right: 30px;">
+      <span style="margin-right: 20px;">
         <img class="logo " src="../../../assets/images/logos/html.png" alt="html">
         HTML
       </span>
@@ -22,9 +22,8 @@
         CSS
       </span>
     </p>
-    <br>
     <p>
-      <span style="margin-right: 30px;">
+      <span style="margin-right: 20px;">
         <img class="logo" src="../../../assets/images/logos/javascript.png" alt="javascript">
         Javascript
       </span>
@@ -34,9 +33,9 @@
       </span>
     </p>
   </mat-card-content>
-  <mat-card-actions class="card-actions">
-    <a mat-button target="_blank" href="https://boiling-brook-33207.herokuapp.com/">VIEW APP</a>
-    <a mat-button target="_black" href="https://github.com/evannguyen85/MyCalculator">SEE SOURCE CODE / GIT</a>
-    <button mat-button (click)="onClose()">CLOSE</button>
+  <mat-card-actions>
+    <a mat-raised-button target="_blank" href="https://boiling-brook-33207.herokuapp.com/">VIEW APP</a>
+    <a mat-raised-button target="_blank" href="https://github.com/evannguyen85/MyCalculator">SEE GIT</a>
+    <a mat-raised-button href="JavaScript:Void(0);" (click)="onClose()">CLOSE</a>
   </mat-card-actions>
 </mat-card>
