@@ -1,41 +1,26 @@
 <mat-card class="dialog-card">
   <mat-card-header>
-    <div mat-card-avatar class="card-header-image"></div>
-    <mat-card-title>CALCULATOR</mat-card-title>
-    <mat-card-subtitle>Responsive Calculator</mat-card-subtitle>
+    <!-- <div mat-card-avatar class="card-header-image"></div> -->
+    <img mat-card-avatar class="card-header-image" src="{{ data.avatar }}" alt="Avatar">
+    <mat-card-title>{{ data.title }}</mat-card-title>
+    <mat-card-subtitle>{{ data.subtitle }}</mat-card-subtitle>
   </mat-card-header>
-  <img src="../../../assets/images/calculator.png" alt="Photo of calculator app" mat-card-image>
+  <img src= "{{ data.imgSource }}" alt="Photo of calculator app" mat-card-image>
   <mat-card-content class="card-content">
     <p>
-      A calculator to peform basic and scientific calculations. This is built using html, css, javascript and
-      bootstrap. The app runs on Heroku so it may take several seconds to start up initially.
+      {{ data.desc }}
     </p>
     <hr>
-    <!-- <strong>{{ data }}</strong> -->
     <p>
-      <span style="margin-right: 20px;">
-        <img class="logo " src="../../../assets/images/logos/html.png" alt="html">
-        HTML
-      </span>
-      <span>
-        <img class="logo" src="../../../assets/images/logos/css.png" alt="css">
-        CSS
-      </span>
-    </p>
-    <p>
-      <span style="margin-right: 20px;">
-        <img class="logo" src="../../../assets/images/logos/javascript.png" alt="javascript">
-        Javascript
-      </span>
-      <span>
-        <img class="logo" src="../../../assets/images/logos/bootstrap.png" alt="bootstrap">
-        Bootstrap
+      <span *ngFor="let tech of data.techs">
+          <img class="logo " src="{{ tech.logo }}" alt="{{tech.name}}">
+          {{ tech.name }}
       </span>
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-raised-button target="_blank" href="https://boiling-brook-33207.herokuapp.com/">VIEW APP</a>
-    <a mat-raised-button target="_blank" href="https://github.com/evannguyen85/MyCalculator">SEE GIT</a>
+    <a mat-raised-button target="_blank" href="{{ data.links.site }}">VIEW APP</a>
+    <a mat-raised-button target="_blank" href="{{ data.links.git }}">SEE GIT</a>
     <a mat-raised-button href="JavaScript:Void(0);" (click)="onClose()">CLOSE</a>
   </mat-card-actions>
 </mat-card>

@@ -13,7 +13,6 @@
 }
 
 .card-header-image {
-    background-image: url('../../../assets/images/calc-icon.png');
     background-size: cover;
 }
 
@@ -46,6 +45,10 @@ p {
 .mat-raised-button {
     line-height: 22px;
     font-size: 14px;
+}
+
+span:not(:last-child) {
+    margin-right: 30px;
 }
 
 @media only screen and (min-width: 768px) {
