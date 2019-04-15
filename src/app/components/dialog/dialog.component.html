@@ -5,7 +5,9 @@
     <mat-card-title>{{ data.title }}</mat-card-title>
     <mat-card-subtitle>{{ data.subtitle }}</mat-card-subtitle>
   </mat-card-header>
-  <img src= "{{ data.imgSource }}" alt="Photo of calculator app" mat-card-image>
+
+    <img src="{{ data.imgSource }}" alt="Photo of calculator app" mat-card-image>
+
   <mat-card-content class="card-content">
     <p>
       {{ data.desc }}
@@ -13,14 +15,14 @@
     <hr>
     <p>
       <span *ngFor="let tech of data.techs">
-          <img class="logo " src="{{ tech.logo }}" alt="{{tech.name}}">
-          {{ tech.name }}
+        <img class="logo " src="{{ tech.logo }}" alt="{{tech.name}}">
+        {{ tech.name }}
       </span>
     </p>
   </mat-card-content>
   <mat-card-actions>
     <a mat-raised-button target="_blank" href="{{ data.links.site }}">VIEW APP</a>
     <a mat-raised-button target="_blank" href="{{ data.links.git }}">SEE GIT</a>
-    <a mat-raised-button href="JavaScript:Void(0);" (click)="onClose()">CLOSE</a>
+    <a mat-raised-button href="#" (click)="onClose()">CLOSE</a>
   </mat-card-actions>
 </mat-card>

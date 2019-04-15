@@ -49,7 +49,7 @@ export class GalleryComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog Closed: ${result}`);
+      // console.log(`Dialog Closed: ${result}`);
       this.dialogResult = result;
     });
   }
@@ -90,8 +90,9 @@ export class GalleryComponent implements OnInit {
       }
     });
 
+    // Returned which action user has taken on the dialog
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog Closed: ${result}`);
+      // console.log(`Dialog Closed: ${result}`);
       this.dialogResult = result;
     });
   }
