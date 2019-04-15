@@ -28,6 +28,12 @@
     background-size: cover;
 }
 
+.thumbnail {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
 a, a:hover, a:active, a:visited {
     text-decoration: none;
 }

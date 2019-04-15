@@ -56,7 +56,7 @@ export class GalleryComponent implements OnInit {
 
   openDialogForCalculator() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '85%',
+      width: '75%',
       data: {
         title: 'CALCULATOR',
         subtitle: 'Responsive calculator',
@@ -86,6 +86,47 @@ export class GalleryComponent implements OnInit {
         links: {
           site: 'https://boiling-brook-33207.herokuapp.com/',
           git: 'https://github.com/evannguyen85/MyCalculator'
+        }
+      }
+    });
+
+    // Returned which action user has taken on the dialog
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log(`Dialog Closed: ${result}`);
+      this.dialogResult = result;
+    });
+  }
+
+  openDialogForPortfolio() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '75%',
+      data: {
+        title: `EVAN'S PORTFOLIO PAGE`,
+        subtitle: 'Showing my bio and projects',
+        avatar: '../../../assets/images/portfolio.png',
+        imgSource: '../../../assets/images/portfolio.png',
+        desc:  `This is my portfolio page to show my professional details. I wrote this page using angular.`,
+        techs: [
+          {
+            name: 'HTML',
+            logo: '../../../assets/images/logos/html.png'
+          },
+          {
+            name: 'CSS',
+            logo: '../../../assets/images/logos/css.png'
+          },
+          {
+            name: 'JavaScript',
+            logo: '../../../assets/images/logos/javascript.png'
+          },
+          {
+            name: 'BootStrap',
+            logo: '../../../assets/images/logos/bootstrap.png'
+          }
+        ],
+        links: {
+          site: 'https://afternoon-oasis-26466.herokuapp.com/',
+          git: 'https://github.com/evannguyen85/evannguyenwebdev'
         }
       }
     });
