@@ -69,7 +69,8 @@ export class GalleryComponent implements OnInit {
                 testers' status (UP or DOWN) from machine logs and visualizes into charts on real time.
                 This helps users (technicians, engineers or supervisors) to monitor the performance
                 of testers on production floor and gives the users useful signals to make data-driven decisions
-                for preventive maintenance.`,
+                for preventive maintenance. The app is hosted on Heroku and connected to MLab,
+                so it might take several time to setup initially`,
         techs: [
           {
             name: 'MongoDB',
