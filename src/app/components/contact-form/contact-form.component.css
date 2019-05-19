@@ -11,9 +11,9 @@ input.form-control {
 .form-control {
     font-size: 18px;
     background-color: #303030;
-    color: white;
+    color: #f1f1f1;
     border: none;
-    border-radius: 0; 
+    border-radius: 0;
 }
 
 .form-control:focus {
@@ -29,13 +29,13 @@ button {
 }
 
 button:hover {
-    background-color: #FDAB21; 
+    background-color: #FDAB21;
 }
 
 .btn[disabled] {
     opacity: 0.3;
 }
 .btn[disabled]:hover {
-    background-color: #FDAB21; 
+    background-color: #FDAB21;
     opacity: 0.3;
 }

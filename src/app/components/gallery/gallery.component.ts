@@ -14,46 +14,6 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  openDialogForDashboard() {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '85%',
-      data: {
-        title: 'TESTER PERFORMANCE DASHBOARD',
-        subtitle: 'Real-time tester monitoring',
-        avatar: '../../../assets/images/dashboard-icon.png',
-        imgSource: '../../../assets/images/dashboard.png',
-        desc:  `Tester performance dashboard to show how tester performs.`,
-        techs: [
-          {
-            name: 'MongoDB',
-            logo: '../../../assets/images/logos/mongodb.png'
-          },
-          {
-            name: 'NodeJS',
-            logo: '../../../assets/images/logos/node.js.png'
-          },
-          {
-            name: 'Express',
-            logo: '../../../assets/images/logos/express.png'
-          },
-          {
-            name: 'Highcharts',
-            logo: '../../../assets/images/logos/highcharts.png'
-          }
-        ],
-        links: {
-          site: 'https://boiling-brook-33207.herokuapp.com/',
-          git: 'https://github.com/evannguyen85/MyCalculator'
-        }
-      }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      // console.log(`Dialog Closed: ${result}`);
-      this.dialogResult = result;
-    });
-  }
-
   openDialogForCalculator() {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '75%',
@@ -62,9 +22,10 @@ export class GalleryComponent implements OnInit {
         subtitle: 'Responsive calculator',
         avatar: '../../../assets/images/calc-icon.png',
         imgSource: '../../../assets/images/calculator.png',
-        desc:  `A calculator to peform basic and scientific calculations.
-                This is built using html, css, javascript and bootstrap.
-                The app runs on Heroku so it may take several seconds to start up initially.`,
+        desc:  `A responsive calculator to peform basic and scientific calculations.
+                The GUI is created using html, css and bootstrap, while functions to handle calculation logics are written in JavaScript.
+                The calculator supports two modes: basic (small screen) and scientific (large screen).
+                The app runs on Heroku so it may take several seconds to start up initially. `,
         techs: [
           {
             name: 'HTML',
@@ -96,6 +57,48 @@ export class GalleryComponent implements OnInit {
       this.dialogResult = result;
     });
   }
+  openDialogForDashboard() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '85%',
+      data: {
+        title: 'TESTER PERFORMANCE DASHBOARD',
+        subtitle: 'Real-time tester monitoring',
+        avatar: '../../../assets/images/dashboard-icon.png',
+        imgSource: '../../../assets/images/dashboard.png',
+        desc:  `Tester performance dashboard is a web-based application that extracts information about manufacturing
+                testers' status (UP or DOWN) from machine logs and visualizes into charts on real time.
+                This helps users (technicians, engineers or supervisors) to monitor the performance
+                of testers on production floor and gives the users useful signals to make data-driven decisions
+                for preventive maintenance.`,
+        techs: [
+          {
+            name: 'MongoDB',
+            logo: '../../../assets/images/logos/mongodb.png'
+          },
+          {
+            name: 'NodeJS',
+            logo: '../../../assets/images/logos/node.js.png'
+          },
+          {
+            name: 'Express',
+            logo: '../../../assets/images/logos/express.png'
+          },
+          {
+            name: 'Highcharts',
+            logo: '../../../assets/images/logos/highcharts.png'
+          }
+        ],
+        links: {
+          site: 'https://radiant-falls-42383.herokuapp.com/hhv001',
+          git: 'https://github.com/evannguyen85/testerdashboard'
+        }
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log(`Dialog Closed: ${result}`);
+      this.dialogResult = result;
+    });
+  }
 
   openDialogForPortfolio() {
     const dialogRef = this.dialog.open(DialogComponent, {
@@ -105,7 +108,10 @@ export class GalleryComponent implements OnInit {
         subtitle: 'Showing my bio and projects',
         avatar: '../../../assets/images/portfolio.png',
         imgSource: '../../../assets/images/portfolio.png',
-        desc:  `This is my portfolio page to show my professional details. I wrote this page using angular.`,
+        desc:  `This is my portfolio page to introduce myself, show my completed projects, and hope to get in touch
+                with the viewers. I wrote this page using angular 7 and angular material. I will continue to improve the UI,
+                add backend services, and update new contents as I grow within the software development field.
+                I am temporarily hosting it on GitHub and plan to buy a domain in the near future.`,
         techs: [
           {
             name: 'HTML',
