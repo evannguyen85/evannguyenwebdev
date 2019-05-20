@@ -145,4 +145,96 @@ export class GalleryComponent implements OnInit {
     });
   }
 
+  openDialogForStore() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '75%',
+      data: {
+        title: 'MENS\' WEAR STORE',
+        subtitle: 'One stop for everything',
+        avatar: '../../../assets/images/store-logo.jpeg',
+        imgSource: '../../../assets/images/store.png',
+        desc:  `A responsive online fashion shop for men (UI only). I created this website to practice using new features in bootstrap 4
+                The GUI is created using html, css and bootstrap, while functions to handle calculation logics are written in JavaScript.
+                and adding admin dashboard by chart.js library. I also took this advantage to practice responsive navigation and css
+                animations. The website is hosted on heroku.`,
+        techs: [
+          {
+            name: 'HTML',
+            logo: '../../../assets/images/logos/html.png'
+          },
+          {
+            name: 'CSS',
+            logo: '../../../assets/images/logos/css.png'
+          },
+          {
+            name: 'JavaScript',
+            logo: '../../../assets/images/logos/javascript.png'
+          },
+          {
+            name: 'BootStrap 4',
+            logo: '../../../assets/images/logos/bootstrap.png'
+          },
+          {
+            name: 'Chart.js',
+            logo: '../../../assets/images/logos/chartjs-logo.svg'
+          }
+        ],
+        links: {
+          site: 'https://thawing-meadow-63820.herokuapp.com/',
+          git: 'https://github.com/evannguyen85/menswearstore'
+        }
+      }
+    });
+
+    // Returned which action user has taken on the dialog
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log(`Dialog Closed: ${result}`);
+      this.dialogResult = result;
+    });
+  }
+
+  openDialogForPatatap() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '75%',
+      data: {
+        title: 'PATATAP CIRCLES',
+        subtitle: 'Visual sound kit application',
+        avatar: '../../../assets/images/patatap.png',
+        imgSource: '../../../assets/images/patatap.png',
+        desc:  `Patatap is a visual sound kit application with animations by computer programmer Jono Brandel
+                and Japanese electronic duo Lullatone, consisting of Shawn James Seymour and Yoshimi Tomida.
+                https://patatap.com/. There was an exercise in one of my web development courses on Udemy to create
+                something similar. Under the instruction of the teacher, I built patatap circles to practice paperjs and howlerjs
+                libraries. Since it's fun, I plan to base on this to create something different in the near future.`,
+        techs: [
+          {
+            name: 'HTML',
+            logo: '../../../assets/images/logos/html.png'
+          },
+          {
+            name: 'CSS',
+            logo: '../../../assets/images/logos/css.png'
+          },
+          {
+            name: 'Paper.js',
+            logo: '../../../assets/images/logos/paperjs.png'
+          },
+          {
+            name: 'howler.js',
+            logo: '../../../assets/images/logos/howlerjs.png'
+          },
+        ],
+        links: {
+          site: 'https://serene-bastion-67445.herokuapp.com/',
+          git: 'https://github.com/evannguyen85/patatap'
+        }
+      }
+    });
+
+    // Returned which action user has taken on the dialog
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log(`Dialog Closed: ${result}`);
+      this.dialogResult = result;
+    });
+  }
 }
