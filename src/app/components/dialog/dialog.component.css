@@ -52,6 +52,15 @@ span:not(:last-child) {
     margin-right: 30px;
 }
 
+@media only screen and (max-width: 576px) {
+  .dialog-card > img {
+      display: none;
+  }
+  p {
+    font-size: 16px;
+}
+}
+
 @media only screen and (min-width: 768px) {
     .dialog-card > img {
         max-width: 40%;
