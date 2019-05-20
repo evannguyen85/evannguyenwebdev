@@ -127,12 +127,20 @@ export class GalleryComponent implements OnInit {
             logo: '../../../assets/images/logos/javascript.png'
           },
           {
+            name: 'Angular 7',
+            logo: '../../../assets/images/logos/angular.png'
+          },
+          {
+            name: 'Angular Material',
+            logo: '../../../assets/images/logos/angular.png'
+          },
+          {
             name: 'BootStrap',
             logo: '../../../assets/images/logos/bootstrap.png'
           }
         ],
         links: {
-          site: 'https://afternoon-oasis-26466.herokuapp.com/',
+          site: 'https://evannguyen85.github.io/',
           git: 'https://github.com/evannguyen85/evannguyenwebdev'
         }
       }
